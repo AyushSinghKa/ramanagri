@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title> Explore Ayodhya with Ease </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1 style="font-family:'Lucida Bright', Georgia, serif;">Explore Ayodhya with Ease</h1>
+      <p style="font-family:'Lucida Bright', Georgia, serif;" class="subtitle">Book Cab & Guide Services Instantly</p>
+
+      <!-- BOOKING CARD -->
+      <div style="font-family:'Lucida Bright', Georgia, serif;" class="card">
+        <h2>Plan Your Trip to Ayodhya</h2>
+
+        <form id="bookingForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="tel" id="phone" placeholder="Mobile Number" required />
+          <!-- <input type="text" id="pickup" placeholder="Pick-up Location" required /> -->
+           <select id="pickup" required>
+            <option value="">Select Pick-up Location</option>
+            <option value="Ayodhya">Ayodhya</option>
+          </select>
+          <input type="text" id="destination" placeholder="Final Drop Location" required />
+          <input type="date" id="date" placeholder="Trip start date" required />
+          <input type="time" id="time" required />
+
+          <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="Cab Only">Cab Only</option>
+            <option value="Cab + Guide">Cab + Guide</option>
+            <option value="Guide Only">Guide Only</option>
+          </select>
+
+          <button type="submit">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+            Book Now on WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="features">
+        <div class="feature">
+          🚕
+          <p>Comfortable Cabs</p>
+        </div>
+        <div class="feature">
+          🧑‍✈️
+          <p>Expert Guides</p>
+        </div>
+        <div class="feature">
+          ☎️
+          <p>24/7 Support</p>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>📞 +91 9792223337| +91 8840974541 | ✉️ suuport@ayodhyatravels.com</p>
+      </footer>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
