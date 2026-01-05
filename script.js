@@ -18,8 +18,8 @@ Service     : ${service}
 Pickup      : ${pickup}
 Destination(Drop) : ${destination}
 
-Date        : ${date}
-Time        : ${time}
+Pick-up Date        : ${date}
+Pick-up Time        : ${time}
 
 Please confirm availability.
 || Jai Shri Ram ||`;
