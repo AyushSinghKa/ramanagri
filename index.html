@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title> Explore Ayodhya with Ease </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title> Explore Ayodhya with Ease </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="overlay"></div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="overlay"></div>
 
-    <div class="content">
-      <h1 style="font-family:'Lucida Bright', Georgia, serif;">Explore Ayodhya with Ease</h1>
-      <p style="font-family:'Lucida Bright', Georgia, serif;" class="subtitle">Book Cab & Guide Services Instantly</p>
+        <div class="content">
+            <h1 style="font-family:'Lucida Bright', Georgia, serif;">Explore Ayodhya with Ease</h1>
+            <p style="font-family:'Lucida Bright', Georgia, serif;" class="subtitle">Book Cab & Guide Services Instantly
+            </p>
 
-      <!-- BOOKING CARD -->
-      <div style="font-family:'Lucida Bright', Georgia, serif;" class="card">
-        <h2>Plan Your Trip to Ayodhya</h2>
+            <!-- BOOKING CARD -->
+            <div style="font-family:'Lucida Bright', Georgia, serif;" class="card">
+                <h2>Plan Your Trip to Ayodhya</h2>
 
-        <form id="bookingForm">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="tel" id="phone" placeholder="Mobile Number" required />
-          <!-- <input type="text" id="pickup" placeholder="Pick-up Location" required /> -->
-           <select id="pickup" required>
-            <option value="">Select Pick-up Location</option>
-            <option value="Ayodhya">Ayodhya</option>
-          </select>
-          <input type="text" id="destination" placeholder="Final Drop Location" required />
-          <input type="date" id="date" placeholder="Trip start date" required />
-          <input type="time" id="time" required />
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="Your Name" required />
+                    <input type="tel" id="phone" placeholder="Mobile Number" required />
+                    <!-- <input type="text" id="pickup" placeholder="Pick-up Location" required /> -->
+                    <select id="pickup" required>
+                        <option value="">Select Pick-up Location</option>
+                        <option value="Ayodhya Airport">Ayodhya Airport</option>
+                        <option value="Local/intacity hotel or point">Local/intacity hotel or point
+                        </option>
+                    </select>
 
-          <select id="service" required>
-            <option value="">Select Service</option>
-            <option value="Cab Only">Cab Only</option>
-            <option value="Cab + Guide">Cab + Guide</option>
-            <option value="Guide Only">Guide Only</option>
-          </select>
+                    <select id="destination" required>
+                        <option value="">Select Final Drop Location</option>
+                        <option value="Drop at Ayodhya Airport">Drop at Ayodhya Airport</option>
+                        <option value="Drop at some Local/Intracity Hotels">Drop at some Local/Intracity Hotels</option>
+                        <option value="Drop at any Local/intracity point">Drop at any Local/intracity point</option>
+                        <option value="Drop Outstation">Drop Outstation</option>
+                    </select>
+                    <!-- <input type="text" id="destination" placeholder="Final Drop Location" required /> -->
 
-          <button type="submit">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
-            Book Now on WhatsApp
-          </button>
-        </form>
-      </div>
 
-      <!-- FEATURES -->
-      <div class="features">
-        <div class="feature">
-          🚕
-          <p>Comfortable Cabs</p>
+                    <!-- <input type="date" id="date"  required /> -->
+                    <input type="text" placeholder="Select Pick up Date" onfocus="(this.type='date')"
+                        onblur="if(!this.value)this.type='text'">
+                    <input type="text" placeholder="Select Pick up Time" onfocus="(this.type='time')"
+                        onblur="if(!this.value)this.type='text'">
+                    <!-- <input type="time" id="time" required /> -->
+
+                    <select id="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Cab Only">Cab Only</option>
+                        <option value="Cab + Guide">Cab + Guide</option>
+                        <option value="Guide Only">Guide Only</option>
+                    </select>
+
+                    <button type="submit">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+                        Book Now on WhatsApp
+                    </button>
+                </form>
+            </div>
+
+            <!-- FEATURES -->
+            <div class="features">
+                <div class="feature">
+                    🚕
+                    <p>Comfortable Cabs</p>
+                </div>
+                <div class="feature">
+                    🧑‍✈️
+                    <p>Expert Guides</p>
+                </div>
+                <div class="feature">
+                    ☎️
+                    <p>24/7 Support</p>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer>
+                <p>📞 +91 9792223337| +91 8840974541 | ✉️ suuport@ramanagri.in</p>
+            </footer>
+
         </div>
-        <div class="feature">
-          🧑‍✈️
-          <p>Expert Guides</p>
-        </div>
-        <div class="feature">
-          ☎️
-          <p>24/7 Support</p>
-        </div>
-      </div>
+    </section>
 
-      <!-- FOOTER -->
-      <footer>
-        <p>📞 +91 9792223337| +91 8840974541 | ✉️ suuport@ayodhyatravels.com</p>
-      </footer>
-
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
