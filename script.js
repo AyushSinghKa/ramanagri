@@ -16,7 +16,7 @@ Phone       : ${phone}
 Service     : ${service}
 
 Pickup      : ${pickup}
-Destination : ${destination}
+Destination(Drop) : ${destination}
 
 Date        : ${date}
 Time        : ${time}

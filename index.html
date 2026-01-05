@@ -36,18 +36,20 @@
 
                     <select id="destination" required>
                         <option value="">Select Final Drop Location</option>
-                        <option value="Drop at Ayodhya Airport">Drop at Ayodhya Airport</option>
-                        <option value="Drop at some Local/Intracity Hotels">Drop at some Local/Intracity Hotels</option>
-                        <option value="Drop at any Local/intracity point">Drop at any Local/intracity point</option>
-                        <option value="Drop Outstation">Drop Outstation</option>
+                        <option value="Ayodhya Airport">Drop at Ayodhya Airport</option>
+                        <option value="Local/Intracity Hotels">Drop at some Local/Intracity Hotels</option>
+                        <option value="Local/intracity point">Drop at any Local/intracity point</option>
+                        <option value="Outstation">Drop Outstation</option>
                     </select>
                     <!-- <input type="text" id="destination" placeholder="Final Drop Location" required /> -->
 
 
                     <!-- <input type="date" id="date"  required /> -->
-                    <input type="text" placeholder="Select Pick up Date" onfocus="(this.type='date')"
+                    <input id="date" required type="text" placeholder="Select Pick up Date" onfocus="(this.type='date')"
                         onblur="if(!this.value)this.type='text'">
-                    <input type="text" placeholder="Select Pick up Time" onfocus="(this.type='time')"
+
+
+                    <input id="time" required type="text" placeholder="Select Pick up Time" onfocus="(this.type='time')"
                         onblur="if(!this.value)this.type='text'">
                     <!-- <input type="time" id="time" required /> -->
 
