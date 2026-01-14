@@ -24,7 +24,7 @@ Pick-up Time        : ${time}
 Please confirm availability.
 || Jai Shri Ram ||`;
 
-  const whatsappNumber = "918595941579"; // CHANGE NUMBER HERE
+  const whatsappNumber = "917054431143"; // CHANGE NUMBER HERE
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     message
   )}`;
