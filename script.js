@@ -3,30 +3,21 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
 
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
-  const pickup = document.getElementById("pickup").value;
-  const destination = document.getElementById("destination").value;
   const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
   const service = document.getElementById("service").value;
 
   const message = `*Ayodhya Booking Request*
 
-Name        : ${name}
-Phone       : ${phone}
-Service     : ${service}
+Name     : ${name}
+Phone    : ${phone}
+Service  : ${service}
+Date     : ${date}
 
-Pickup      : ${pickup}
-Destination(Drop) : ${destination}
-
-Pick-up Date        : ${date}
-Pick-up Time        : ${time}
-
-Please confirm availability.
 || Jai Shri Ram ||`;
 
   const whatsappNumber = "917054431143"; // CHANGE NUMBER HERE
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   window.open(url, "_blank");
