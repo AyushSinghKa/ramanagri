@@ -15,7 +15,7 @@ function togglePill(element) {
 function handleSubmit() {
   submitClickCount++;
 
-  const btn = document.getElementById("submitBtn");
+  const btn = document.getElementById("submitBtnLeadform");
   if (submitClickCount > MAX_CLICKS) {
     btn.disabled = true;
     btn.classList.remove("loading");
