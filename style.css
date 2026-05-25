@@ -13,6 +13,23 @@
   --off-white: #fffdf9;
 }
 
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.phone-help {
+  font-size: 0.78rem;
+  color: #b02a37;
+  margin-top: 2px;
+  display: block;
+}
+
+.phone-help.valid {
+  color: #218838;
+}
+
 * {
   margin: 0;
   padding: 0;
