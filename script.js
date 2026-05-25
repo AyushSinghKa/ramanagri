@@ -264,3 +264,23 @@ function resetButton(btn) {
   btn.innerText = "🙏 Get My Free Quote";
   btn.disabled = false;
 }
+
+const phoneInput = document.getElementById("phone");
+const submitBtn = document.getElementById("submitBtnLeadform");
+
+function isValidIndianMobile(phone) {
+  return /^[6-9]\d{9}$/.test(phone);
+}
+
+phoneInput.addEventListener("input", function () {
+  // Allow only numbers
+  this.value = this.value.replace(/\D/g, "");
+
+  // Limit to 10 digits
+  if (this.value.length > 10) {
+    this.value = this.value.slice(0, 10);
+  }
+
+  // Enable button only if valid Indian mobile number
+  submitBtn.disabled = !isValidIndianMobile(this.value);
+});
