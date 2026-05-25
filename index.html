@@ -70,7 +70,8 @@
       <div class="hero-badge"><span>🛕</span> Ayodhya Dham, Uttar Pradesh</div>
       <p class="hero-sanskrit">— अतिथि देवो भव: —</p>
       <h1>Your Trusted Guide to<br /><em>Holy Ayodhya & Varanasi</em></h1>
-      <p>Premium taxi services and certified spiritual guides for Ram Mandir, Hanumangarhi, Kanak Bhawan, Kashi Vishwanath Temple, Dashashwamedh Ghat & all sacred
+      <p>Premium taxi services and certified spiritual guides for Ram Mandir, Hanumangarhi, Kanak Bhawan, Kashi
+        Vishwanath Temple, Dashashwamedh Ghat & all sacred
         sites. Comfortable, reliable, and always on time.</p>
       <div class="hero-actions">
         <a href="#book" class="btn-primary">📋 Get Free Quote</a>
@@ -128,8 +129,11 @@
           </div>
           <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" required
+            <input type="tel" id="phone" name="phone" pattern="[6-9][0-9]{9}" maxlength="10" required
               placeholder="10 Digit Mobile Number" />
+            <small id="phoneHelp" class="phone-help">
+              Please enter a valid 10 digit Indian mobile number.
+            </small>
           </div>
           <div class="form-group">
             <label>Travel Date</label>
@@ -160,7 +164,7 @@
           </div>
         </div>
 
-        <button id="submitBtnLeadform" class="submit-btn" onclick="handleSubmit()">
+        <button id="submitBtnLeadform" class="submit-btn" onclick="handleSubmit()" disabled>
           🙏 Get My Free Quote
         </button>
         <div class="form-note">✓ No spam &nbsp;·&nbsp; ✓ Quick response &nbsp;·&nbsp; ✓ Best prices guaranteed</div>
@@ -269,13 +273,13 @@
         <h4>Kashi Vishwnath Mandir</h4>
         <p>Divine Gold Temple</p>
       </div>
-      
+
       <div class="dest-card">
         <span class="dest-emoji">🙏</span>
         <h4>Treta Ka Thakur</h4>
         <p>Ancient Ram temple</p>
       </div>
-      
+
       <div class="dest-card">
         <span class="dest-emoji">🌸</span>
         <h4>All Sacred Sites</h4>

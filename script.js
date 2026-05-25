@@ -46,9 +46,10 @@ function handleSubmit() {
     ? document.querySelector(".pill.active").innerText
     : "";
 
-  if (!phone) {
-    showToast("Please fill in Phone number atleast.", "error");
+  if (!isValidIndianMobile(phone)) {
+    showToast("Please enter a valid 10 digit Indian mobile number.", "error");
     resetButton(btn);
+    updatePhoneValidationMessage();
     return;
   }
   const formData = {
@@ -76,6 +77,7 @@ function handleSubmit() {
       document
         .querySelectorAll("input, textarea")
         .forEach((el) => (el.value = ""));
+      updatePhoneValidationMessage();
     })
     .catch((error) => {
       showToast("Something went wrong. Please try again.", "error");
@@ -262,25 +264,37 @@ function showToast(message, type = "success") {
 function resetButton(btn) {
   btn.classList.remove("loading");
   btn.innerText = "🙏 Get My Free Quote";
-  btn.disabled = false;
+  updatePhoneValidationMessage();
 }
 
 const phoneInput = document.getElementById("phone");
 const submitBtn = document.getElementById("submitBtnLeadform");
+const phoneHelp = document.getElementById("phoneHelp");
 
 function isValidIndianMobile(phone) {
   return /^[6-9]\d{9}$/.test(phone);
 }
 
-phoneInput.addEventListener("input", function () {
-  // Allow only numbers
-  this.value = this.value.replace(/\D/g, "");
+function updatePhoneValidationMessage() {
+  phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
 
-  // Limit to 10 digits
-  if (this.value.length > 10) {
-    this.value = this.value.slice(0, 10);
+  const phone = phoneInput.value.trim();
+  const isValid = isValidIndianMobile(phone);
+
+  submitBtn.disabled = !isValid;
+
+  if (!phone) {
+    phoneHelp.innerText = "Please enter a valid 10 digit Indian mobile number.";
+    phoneHelp.classList.remove("valid");
+  } else if (!isValid) {
+    phoneHelp.innerText =
+      "Mobile number must be 10 digits and start with 6, 7, 8, or 9.";
+    phoneHelp.classList.remove("valid");
+  } else {
+    phoneHelp.innerText = "Valid mobile number.";
+    phoneHelp.classList.add("valid");
   }
+}
 
-  // Enable button only if valid Indian mobile number
-  submitBtn.disabled = !isValidIndianMobile(this.value);
-});
+phoneInput.addEventListener("input", updatePhoneValidationMessage);
+updatePhoneValidationMessage();
